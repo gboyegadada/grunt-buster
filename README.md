@@ -1,6 +1,6 @@
 # grunt-buster
 
-> Cache buster plugin for Grunt"
+> Cache buster plugin for Grunt
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
@@ -37,17 +37,29 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
+#### options.fileName
 Type: `String`
-Default value: `',  '`
+Default value: `'busters.json'`
 
-A string value that is used to do something with whatever.
+#### options.algo
+Type: `String`
+Default value: `'md5'`
 
-#### options.punctuation
+#### options.length
+Type: `Integer`
+Default value: `0`
+
+#### options.transform
+Type: `Object`
+Default value: `Object`
+
+#### options.formatter
+Type: `function`
+Default value: `JSON.stringify`
+
+#### options.relativePath
 Type: `String`
 Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
 
 ### Usage Examples
 
