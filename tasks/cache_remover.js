@@ -1,6 +1,6 @@
 /*
- * grunt-buster
- * https://github.com/gboyegadada/grunt-buster
+ * grunt-cache-remover
+ * https://github.com/gboyegadada/grunt-cache-remover
  *
  * Copyright (c) 2019 Gboyega Dada
  * Licensed under the MIT license.
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  grunt.registerMultiTask('buster', 'Cache buster plugin for Grunt"', function() {
+  grunt.registerMultiTask('cache_remover', 'Cache buster plugin for Grunt"', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
       fileName: 'busters.json',
@@ -81,18 +81,13 @@ module.exports = function(grunt) {
         return grunt.file.read(filepath);
       }).join(grunt.util.normalizelf(options.separator));
 
-      // Write the destination file.
-      grunt.file.write(f.dest, src);
-
       // Read file source.
       hashFile({ 
         cwd: '.',
         path: f.dest, 
         content: src
       });
-
-      // Print a success message.
-      grunt.log.writeln('File "' + f.dest + '" created.');
+      
     });
     
 

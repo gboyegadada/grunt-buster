@@ -1,6 +1,6 @@
 /*
- * grunt-buster
- * https://github.com/gboyegadada/grunt-buster
+ * grunt-cache-remover
+ * https://github.com/gboyegadada/grunt-cache-remover
  *
  * Copyright (c) 2019 Gboyega Dada
  * Licensed under the MIT license.
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    buster: {
+    cache_remover: {
       default_options: {
         options: {
         },
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'buster', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'cache_remover', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
