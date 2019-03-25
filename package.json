@@ -1,7 +1,7 @@
 {
   "name": "grunt-cache-remover",
   "description": "Cache buster plugin for Grunt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/gboyegadada/grunt-cache-remover",
   "author": {
     "name": "Gboyega Dada",
